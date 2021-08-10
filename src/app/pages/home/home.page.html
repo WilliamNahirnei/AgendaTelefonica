@@ -1,0 +1,33 @@
+
+<div class="total">
+  <div class="header">
+    <h1>
+      Agenda contatos
+    </h1>
+  </div>
+  <div class="content">
+    <ion-list class="list">
+      <ion-item-group  *ngFor="let contato of _lista_contatos">
+        <ion-grid color="medium"> 
+          <ion-row><ion-col size="12"><ion-item lines="none" color="medium">Nome: {{contato.getNome()}}</ion-item></ion-col></ion-row>
+          <ion-row><ion-col size="12"><ion-item lines="none" color="medium">Telefone: {{contato.getTelefone()}}</ion-item></ion-col></ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-item lines="none" color="medium">Data de Nascimento: {{contato.getDataNascimento()}}</ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item lines="none" color="medium">Sexo: {{contato.getSexo()}}</ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item-group>
+  </ion-list>
+
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button color="success" (click)="goCadastro()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  </div>
+</div>

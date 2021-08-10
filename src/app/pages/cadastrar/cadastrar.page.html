@@ -1,0 +1,42 @@
+<div class="total">
+  <div class="header">
+    <h1>
+      Agenda contatos
+    </h1>
+  </div>
+  <div class="content">
+    <ion-content>
+      <ion-list>
+        <ion-grid>
+        <ion-input placeholder="Nome" type="text" [(ngModel)]="_nome"></ion-input>
+        <ion-input placeholder="Telefone" type="number" [(ngModel)]="_telefone" ></ion-input>
+        <ion-grid color="medium"> 
+          <ion-row>
+            <ion-col size="6">
+              <ion-item lines="none">
+                <ion-datetime  placeholder="Data de nascimento" [(ngModel)] = "_dataNascimento"
+                displayFormat="DD/MM/YYYY" min="1940-01-01" max="2020-08-01" ></ion-datetime>
+              </ion-item>
+            </ion-col>
+            <ion-col size="6">
+              <ion-item lines="none">
+                <ion-select  placeholder="Sexo" [(ngModel)]="_sexo" >
+                  <ion-select-option value="feminino">Feminino</ion-select-option>
+                  <ion-select-option value="masculino">Masculino</ion-select-option>
+                  <ion-select-option value="oculto">Prefiro Não informar</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+    
+      
+        </ion-grid>
+        <ion-button shape="round" expand="full" (click)="Cadastrar()">Cadastrar</ion-button>
+        <ion-button shape="round" expand="full" color="danger" (click)="goHome()">Cancelar</ion-button>
+        </ion-grid>
+      </ion-list>
+    </ion-content>
+    
+  </div>
+  
+</div>
